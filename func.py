@@ -13,7 +13,7 @@ def getArgs(args, usage):
 
 	#valores padroes
 	#-----------------------------------
-
+False
 	n = 0
 	timeout = 2
 	ports = False
@@ -81,7 +81,7 @@ def getPorts(range_ports):
 		except:
 			return False;
 
-def scanner(host, port, v, timeout, open_ports, closed_ports):
+def scanner(host, port, v, timeout, open_ports, closed_ports): #funcao que verifica se a porta está aberta
 
 	s = socket(AF_INET, SOCK_STREAM)
 	s.settimeout(timeout)
